@@ -1,9 +1,6 @@
-MaxHSpeed = 4;
-MaxUpSpeed = 10;
-MaxFallSpeed = 8;
-
-Gravity = 0.5;
-gravity = Gravity;
+MaxHSpeed = 5;
+MaxUpSpeed = 5;
+MaxFallSpeed = 5;
 
 bBullet = true;
 BulletCooldown = room_speed / 4;

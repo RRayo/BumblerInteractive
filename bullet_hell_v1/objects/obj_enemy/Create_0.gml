@@ -1,5 +1,5 @@
 
-path_start(pth_enemy, 1, path_action_restart, false);
+path_start(pth_test, 1, path_action_restart, false);
 
 bDestroy = false;
 bScaleDown = false;

@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "25a9569c-bf04-44de-a018-4d537a6f3733",
+            "Value": {
+                "id": "10995700-cc56-42e8-b383-b1f3fd72f8e8",
+                "resourcePath": "paths\\pth_test\\pth_test.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "29aa9868-ce27-4d06-901d-0d65a8cfb869",
             "Value": {
                 "id": "9a51b43d-a229-4db3-879a-4f46c72402c5",

@@ -1,3 +1,4 @@
+
 // Movement
 if (!bTackle)
 {
@@ -32,22 +33,28 @@ if (!bTackle)
 	{
 		game_restart();
 	}
+	
+	if (keyboard_check(vk_nokey))
+	{
+	  vspeed = 0;
+	  hspeed = 0;
+	}
 
 
 	var InstTileBottom = instance_place(x, y - sprite_height / 2 + 1, obj_tile);
 
 	if (InstTileBottom != noone) && vspeed < 0
 	{
-		vspeed = min(MaxFallSpeed, InstTileBottom.bbox_top - y + sprite_height / 2);
+		vspeed = min(MaxFallSpeed, InstTileBottom.bbox_bottom - y + sprite_height / 2);
 		//y = InstTileBottom.bbox_top - sprite_height + sprite_yoffset;
 	
 	}
 	
 	var InstTileUp = instance_place(x, y + sprite_height / 2 + 1, obj_tile);
 
-	if ((InstTileUp != noone) && vspeed > 0)
+	if (InstTileUp != noone && vspeed > 0)
 	{
-		vspeed = min(MaxFallSpeed, InstTileBottom.bbox_top - y - sprite_height / 2);
+		vspeed = min(MaxFallSpeed, InstTileUp.bbox_top - y - sprite_height / 2);
 		//y = InstTileBottom.bbox_top - sprite_height + sprite_yoffset;
 	
 	}
@@ -75,7 +82,7 @@ if (!bTackle)
 
 	image_angle = point_direction(x, y, mouse_x, mouse_y);
 
-	if (mouse_check_button_pressed(mb_left) && bBullet)
+	if (mouse_check_button(mb_left) && bBullet)
 	{
 		bBullet = false;
 		InstBullet = instance_create_layer(x, y, "Instances", obj_bullet);
